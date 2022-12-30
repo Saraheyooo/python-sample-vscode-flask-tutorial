@@ -27,8 +27,7 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az databricks workpace create --resource-group sarah-pipeline'
-  inputs:
-    versionSpec: '$(python.version)'
+
   displayName: 'Use Python $(python.version)'
 
 - script: |
