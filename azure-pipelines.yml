@@ -26,7 +26,7 @@ steps:
     azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az databricks workpace create --resource-group sarah-pipeline'
+    inlineScript: 'az databricks workspace create --resource-group MyResourceGroup --name SarahWorkspace --location westus --sku standard'
 
 - script: |
     python -m pip install --upgrade pip
