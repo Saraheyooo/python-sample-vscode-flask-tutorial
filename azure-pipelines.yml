@@ -20,13 +20,10 @@ strategy:
       python.version: '3.10'
 
 steps:
-
-- task: AzureCLI@2
+- task: UsePythonVersion@0
   inputs:
-    azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az databricks workspace create --resource-group MyResourceGroup --name SarahWorkspace --location westus --sku standard'
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
 
 - script: |
     python -m pip install --upgrade pip
