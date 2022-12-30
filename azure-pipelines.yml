@@ -21,6 +21,12 @@ strategy:
 
 steps:
 - task: UsePythonVersion@0
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az databricks workpace create --resource-group sarah-pipeline'
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
