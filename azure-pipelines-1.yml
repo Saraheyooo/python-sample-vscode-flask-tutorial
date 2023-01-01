@@ -17,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
+    scriptType: 'batch'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az storage account create --resource-group exampleGroup --name examplestore --location westus --sku Standard_LRS --kind StorageV2'
