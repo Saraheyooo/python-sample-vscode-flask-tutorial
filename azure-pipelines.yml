@@ -32,10 +32,3 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
-
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az databricks workspace create --resource-group MyResourceGroup --name MyWorkspace --location westus --sku standard'
