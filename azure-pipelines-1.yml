@@ -24,3 +24,6 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az group create --name sarah-training-azcli2 --location westeurope'
+
+- script: 
+    echo '`hello world'
