@@ -23,4 +23,4 @@ steps:
     azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
     scriptType: 'batch'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az storage account create --resource-group exampleGroup --name examplestore --location westus --sku Standard_LRS --kind StorageV2'
+    inlineScript: 'az group create --name sarah-training-azcli --location westeurope'
