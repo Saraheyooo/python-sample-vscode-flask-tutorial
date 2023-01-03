@@ -32,3 +32,10 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az group create --name sarah-training-azcli2 --location westeurope'
