@@ -11,6 +11,7 @@ steps:
   displayName: 'List all the files'
 
 - script: |
+    pip install databricks-cli
     cp databricks-config ~/.databrickscfg
     databricks workspace ls
   displayName: 'Copy the file'
