@@ -21,6 +21,6 @@ steps:
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'reg-dev-eu-modelservingplatform (SPN)'
-    scriptType: 'batch'
+    scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az group create --name sarah-training-azcli --location westeurope'
+    inlineScript: 'az group create --name sarah-training-azcli2 --location westeurope'
